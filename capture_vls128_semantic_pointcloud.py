@@ -10,7 +10,6 @@ Required Isaac Sim launch flag:
     --/rtx-transient/stableIds/enabled=True
 
 Scene convention:
-    - Y is the up axis.
     - The LiDAR rig is moved using xformOp:translate and xformOp:rotateXYZ.
     - Semantic labels may be attached directly to a prim or to one of its parents.
 """
