@@ -66,21 +66,11 @@ LIDAR_POSITION = Gf.Vec3d(297.0, 23.0, -5551.0)
 # For the current fixed-position workflow, keep this as one position only.
 CAPTURE_POSITIONS = [LIDAR_POSITION]
 
-# Fixed-position repeated capture setup.
-# This keeps the old-style console output:
-#     Step 1/100
-#     Step points: ...
-#     Step label counts: ...
+
 #
 # The LiDAR does not move between these steps. Each visible step captures
 # multiple internal frames from the same fixed position, then merges them.
-#
-# Equivalent to the old setup:
-#     NUM_Z_LANES = 5
-#     STEPS_PER_SWATH = 20
-#     SUBFRAMES_PER_STEP = 4
-#     5 * 20 = 100 visible steps
-#     100 * 4 = 400 total LiDAR frame captures
+
 STEPS_PER_POSITION = 100
 FRAMES_PER_STEP = 4
 FRAME_DELAY_SEC = 0.02
@@ -96,7 +86,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 ENABLE_DEBUG_DRAW = False
 SAVE_DEBUG_CLOUD = True
 
-# Print old-style step progress so the console does not look frozen.
+
 PRINT_STEP_PROGRESS = True
 
 # Print semantic label counts after every visible step.
